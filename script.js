@@ -1,34 +1,37 @@
 const getSumBtn = document.createElement("button");
-getSumBtn.append("Get Total Price");
+getSumBtn.innerText = "Get Total Price";
 document.body.appendChild(getSumBtn);
 
 const getSum = () => {
-  // Select all price elements
+  // Remove old total row if it already exists
+  const oldRow = document.getElementById("total-row");
+  if (oldRow) {
+    oldRow.remove();
+  }
+
+  // Select all price cells
   const prices = document.querySelectorAll(".price");
 
   let total = 0;
 
-  // Calculate total
+  // Add all prices
   prices.forEach((item) => {
     total += Number(item.textContent);
   });
 
   // Create new row
   const row = document.createElement("tr");
+  row.id = "total-row";
 
   // Create new cell
   const cell = document.createElement("td");
-
-  // Span across both columns
   cell.colSpan = 2;
+  cell.innerText = total;
 
-  // Add total text
-  cell.textContent = total;
-
-  // Append cell to row
+  // Add cell to row
   row.appendChild(cell);
 
-  // Append row to table
+  // Add row to table
   document.querySelector("table").appendChild(row);
 };
 
