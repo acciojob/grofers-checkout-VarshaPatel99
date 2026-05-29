@@ -1,28 +1,19 @@
-
-/* Your CSS Code here. */
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
   background-color: #f4f4f4;
+  padding: 30px;
 }
 
 table {
-  width: 60%;
-  margin: 20px auto;
+  width: 50%;
+  margin: auto;
   border-collapse: collapse;
-  background-color: white;
+  background: white;
 }
 
-caption {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 12px;
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
   text-align: center;
 }
 
@@ -31,18 +22,7 @@ th {
   color: white;
 }
 
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #2196F3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #1976D2;
+tr:last-child {
+  font-weight: bold;
+  background-color: #f2f2f2;
 }
